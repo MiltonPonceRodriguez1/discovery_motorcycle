@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* INICIO SLIDER STYLES */
+.mat-slider {
+  width: 400px;
+}
+
+.mat-slider.mat-accent .mat-slider-track-fill, .mat-slider.mat-accent .mat-slider-thumb, .mat-slider.mat-accent .mat-slider-thumb-label {
+    background-color: #0EBEA3;
+}
+/* FIN SLIDER STYLES */

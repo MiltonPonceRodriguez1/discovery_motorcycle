@@ -1,0 +1,81 @@
+<p>stepper works!</p>
+
+<hr>
+
+
+<mat-stepper [linear]="isLinear" #stepper>
+
+  <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepperIcon="edit">
+      <mat-icon>motorcycle</mat-icon>
+    </ng-template>
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel state="phone">Fill out your name</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+
+<h2>PRICES xD</h2>
+
+<mat-card>
+  <mat-card-content>
+    <section class="example-section">
+      <mat-form-field class="example-margin example-width" appearance="fill">
+        <mat-label>Value</mat-label>
+        <input matInput type="number" [(ngModel)]="value">
+      </mat-form-field>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-result-card">
+  <mat-card-content>
+
+    <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
+      <label id="example-name-label" class="example-name-label">Max Value</label>
+      <label class="example-value-label">{{value}}</label>
+    </div>
+    <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
+      [thumbLabel]="thumbLabel" [displayWith]="formatLabel" [tickInterval]="getSliderTickInterval()" [(ngModel)]="value"
+      [vertical]="vertical" aria-labelledby="example-name-label">
+    </mat-slider>
+  </mat-card-content>
+</mat-card>
+
+
+<hr>
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile theme="forest">1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list>
