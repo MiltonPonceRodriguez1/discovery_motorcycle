@@ -17,6 +17,13 @@ body {
 }
 
 .mat-slider.mat-accent .mat-slider-track-fill, .mat-slider.mat-accent .mat-slider-thumb, .mat-slider.mat-accent .mat-slider-thumb-label {
-    background-color: #0EBEA3;
+    background-color: #3f51b5;
 }
 /* FIN SLIDER STYLES */
+
+/* INICIO RADIO BUTTON STYLES */
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+/* FIN RADIO BUTTON STYLES */
+

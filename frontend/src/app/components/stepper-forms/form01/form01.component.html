@@ -1,0 +1,29 @@
+<div class="text-center">
+    <h1>¿Cuál es tu presupuesto?</h1>
+</div>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="text-center">
+        <div class="mb-3">
+            <mat-radio-group aria-label="Select an option" name="budget" [(ngModel)]="budget">
+                <mat-radio-button value="credit">Credito</mat-radio-button>
+                <mat-radio-button value="cash">Contado</mat-radio-button>
+                <mat-radio-button value="msi">Meses sin intereses</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput name="name" placeholder="Last name, First name" [(ngModel)]="nombre" required >
+        </mat-form-field>
+
+
+
+
+    </div>
+    <div>
+        <button mat-button matStepperNext>Next</button>
+    </div>
+</form>
+
+<button mat-raised-button color="primary"  (click)="test()">Testing</button>

@@ -8,6 +8,7 @@ import {TooltipPosition} from '@angular/material/tooltip';
   styleUrls: ['./stepper.component.css']
 })
 export class StepperComponent implements OnInit {
+  value = 0;
   autoTicks = false;
   disabled = false;
   invert = false;
@@ -16,7 +17,6 @@ export class StepperComponent implements OnInit {
   showTicks = false;
   step = 200;
   thumbLabel = true;
-  value = 0;
   vertical = false;
   tickInterval = 1;
 
@@ -42,7 +42,8 @@ export class StepperComponent implements OnInit {
 
   positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
   position = new FormControl(this.positionOptions[0]);
-  isLinear = 'Disable linear mode';
+  //isLinear = 'Enable linear mode';
+  isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   ThirdFormGroup: FormGroup;
@@ -62,15 +63,7 @@ export class StepperComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
-    });
-    this.ThirdFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
-    });
+    !this.isLinear ? 'Enable linear mode' : 'Disable linear mode'
   }
 
 }
