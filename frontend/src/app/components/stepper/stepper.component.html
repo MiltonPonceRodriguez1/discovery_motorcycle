@@ -3,23 +3,12 @@
 </div>
 
 
-<mat-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
+<mat-stepper [linear]="isLinear" #stepper >
+  <mat-step [stepControl]="firstFormGroup" label="¿Cuál es tu presupuesto?">
     <ng-template matStepperIcon="edit">
       <mat-icon>motorcycle</mat-icon>
     </ng-template>
-    <!--<form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel state="phone">Fill out your name</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>-->
     <app-form01></app-form01>
-
   </mat-step>
 
   <mat-step [stepControl]="secondFormGroup" label="Fill out your address">

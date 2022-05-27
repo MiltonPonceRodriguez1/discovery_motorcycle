@@ -10,31 +10,34 @@ import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class Form01Component implements OnInit {
   nombre: string;
   budget: string;
-
+  min: number;
+  max: number;
 
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 70000;
-  min = 15000;
   showTicks = false;
   step = 200;
   thumbLabel = true;
   value = 0;
   vertical = false;
   tickInterval = 1;
+  max_slider = 100000;
+  min_slider = 15000;
 
 
 
   constructor() {
     this.nombre = '';
-    this.budget = '';
+    this.budget = 'cash';
+    this.min = 15000;
+    this.max = 70000;
    }
 
   ngOnInit(): void {
   }
 
-  /*getSliderTickInterval(): number | 'auto' {
+  getSliderTickInterval(): number | 'auto' {
     if (this.showTicks) {
       return this.autoTicks ? 'auto' : this.tickInterval;
     }
@@ -49,11 +52,13 @@ export class Form01Component implements OnInit {
     console.log(this.value);
 
     return value;
-  }*/
+  }
 
   test(){
     console.log(this.nombre);
     console.log(this.budget);
+    console.log(this.min);
+    console.log(this.max);
   }
 
   onSubmit(form: any) {

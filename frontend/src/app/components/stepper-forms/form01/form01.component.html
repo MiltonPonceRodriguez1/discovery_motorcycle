@@ -3,27 +3,97 @@
 </div>
 <form #form="ngForm" (ngSubmit)="onSubmit(form)">
     <div class="text-center">
+        <h2>Elige una forma de pago para tu Nueva Motocicleta</h2>
         <div class="mb-3">
-            <mat-radio-group aria-label="Select an option" name="budget" [(ngModel)]="budget">
-                <mat-radio-button value="credit">Credito</mat-radio-button>
-                <mat-radio-button value="cash">Contado</mat-radio-button>
-                <mat-radio-button value="msi">Meses sin intereses</mat-radio-button>
-            </mat-radio-group>
+            <mat-card>
+                <mat-card-content>
+                    <mat-radio-group aria-label="Select an option" name="budget" [(ngModel)]="budget" required>
+                        <mat-radio-button value="credit">Credito</mat-radio-button>
+                        <mat-radio-button value="cash">Contado</mat-radio-button>
+                        <mat-radio-button value="msi">Meses sin intereses</mat-radio-button>
+                    </mat-radio-group>
+                </mat-card-content>
+            </mat-card>
         </div>
 
-        <ng-template matStepLabel>Fill out your name</ng-template>
+        <!--<ng-template matStepLabel>Fill out your name</ng-template>
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
             <input matInput name="name" placeholder="Last name, First name" [(ngModel)]="nombre" required >
-        </mat-form-field>
+        </mat-form-field>-->
 
+        <div class="row mb-3">
+            <h2> Precio Mínimo</h2>
+            <div class="col">
+                <mat-card>
+                    <mat-card-content>
+                        <section class="example-section">
+                            <mat-form-field class="example-margin example-width" appearance="fill">
+                                <mat-label>Precio Mínimo</mat-label>
+                                <input matInput type="number" name="min" [(ngModel)]="min">
+                            </mat-form-field>
+                        </section>
+                    </mat-card-content>
+                </mat-card>
+            </div>
 
+            <div class="col">
+                <mat-card class="example-result-card">
+                    <mat-card-content>
+
+                        <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
+                            <label id="example-name-label" class="example-name-label">Precio Mínimo: {{min}}</label>
+                        </div>
+                        <mat-slider class="example-margin" name="min" [disabled]="disabled" [invert]="invert" [max]="max_slider" [min]="min_slider" [step]="step"
+                        [thumbLabel]="thumbLabel" [displayWith]="formatLabel" [tickInterval]="getSliderTickInterval()"
+                        [(ngModel)]="min" [vertical]="vertical" aria-labelledby="example-name-label">
+                        </mat-slider>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- INICIO SLIDER PRECIO MAXIMO -->
+        <div class="row mb-3">
+            <h2> Precio Máximo</h2>
+
+            <div class="col">
+                <mat-card>
+                    <mat-card-content>
+                        <section class="example-section">
+                            <mat-form-field class="example-margin example-width" appearance="fill">
+                                <mat-label>Precio Máximo</mat-label>
+                                <input matInput type="number" name="max" [(ngModel)]="max">
+                            </mat-form-field>
+                        </section>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col">
+                <mat-card class="example-result-card">
+                    <mat-card-content>
+
+                        <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
+                            <label id="example-name-label" class="example-name-label">Precio Máximo: {{max}}</label>
+                        </div>
+                        <mat-slider class="example-margin" name="max" [disabled]="disabled" [invert]="invert" [max]="max_slider" [min]="min_slider" [step]="step"
+                        [thumbLabel]="thumbLabel" [displayWith]="formatLabel" [tickInterval]="getSliderTickInterval()"
+                        [(ngModel)]="max" [vertical]="vertical" aria-labelledby="example-name-label">
+                        </mat-slider>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <!-- FINAL SLIDER PRECIO MAXIMO -->
 
 
     </div>
-    <div>
-        <button mat-button matStepperNext>Next</button>
+    <div align="end">
+        <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon" (click)="test()">
+            <!--<mat-icon>navigate_before</mat-icon>-->
+            <mat-icon>navigate_next</mat-icon>
+          </button>
     </div>
 </form>
 
-<button mat-raised-button color="primary"  (click)="test()">Testing</button>
