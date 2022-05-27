@@ -16,6 +16,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatRadioModule } from "@angular/material/radio";
+import { MatDividerModule } from "@angular/material/divider";
 /* FIN DE DEPENDENCIAS MATERIAL */
 
 import { AppComponent } from './app.component';
@@ -60,7 +61,8 @@ import { Form07Component } from './components/stepper-forms/form07/form07.compon
     MatCardModule,
     MatCheckboxModule,
     MatGridListModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

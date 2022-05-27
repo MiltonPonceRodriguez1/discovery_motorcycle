@@ -1,0 +1,61 @@
+
+
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+
+.test {
+    font-size: 20px;
+}
+
+.card-type {
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+.card-type:hover {
+  border: 2px solid #6c757d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-type-1 {
+  background-color: #e6f6ff;
+  box-shadow: 0 0 0 1px #00a4ff;
+  border: 1px solid #00a4ff;
+  border-radius: 5px;
+}
+
+.card-type-1:hover {
+  border: 2px solid #00a4ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mat-card {
+  background-color: transparent;
+}
+

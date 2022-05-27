@@ -5,25 +5,38 @@
 
 <mat-stepper [linear]="isLinear" #stepper >
   <mat-step [stepControl]="firstFormGroup" label="¿Cuál es tu presupuesto?">
-    <ng-template matStepperIcon="edit">
+    <ng-template matStepperIcon="motorcycle">
       <mat-icon>motorcycle</mat-icon>
     </ng-template>
+
     <app-form01></app-form01>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Selecciona tu tipo de Motocicleta">
+
+    <app-form02></app-form02>
   </mat-step>
 
   <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
 
-    <form [formGroup]="secondFormGroup">
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+    <app-form03></app-form03>
   </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+
+    <app-form04></app-form04>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+
+    <app-form05></app-form05>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+
+    <app-form06></app-form06>
+  </mat-step>
+
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     <p>You are now done.</p>
@@ -35,9 +48,9 @@
 </mat-stepper>
 
 
-<div class="container text-center">
+<!--<div class="container text-center">
   <app-test></app-test>
-</div>
+</div>-->
 
 
 <!--
