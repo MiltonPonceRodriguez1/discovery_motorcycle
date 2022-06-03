@@ -31,7 +31,9 @@ export class Form04Component implements OnInit, DoCheck {
       'headlight_type',
       'tires',
       'inverted_front_suspension',
-      'monoshock_suspension'
+      'monoshock_suspension',
+      'XD',
+      'Elrokysmicks'
     );
 
     this.properties_name.forEach(element =>
