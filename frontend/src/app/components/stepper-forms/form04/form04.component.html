@@ -1,1 +1,145 @@
-<p>form04 works!</p>
+<div class="text-center mt-1">
+    <h1>¿Qué Características desearía en su Motocicleta?</h1>
+</div>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="text-center">
+        <h2>Elige tantas como quieras</h2>
+    </div>
+
+
+    <div class="mb-3">
+        <div class="container">
+
+            <div  class="row flex justify-content-center">
+                <div class="col-md-3 mt-4">
+                    <mat-card id="antitheft_alarm" (click)="status(0)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="antitheft_alarm" [(ngModel)]="properties[0]" (click)="status(0)">Alarma Antirobo</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="usb_port" (click)="status(1)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="usb_port" [(ngModel)]="properties[1]" (click)="status(1)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="digital_board" (click)="status(2)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary"  name="digital_board" [(ngModel)]="properties[2]" (click)="status(2)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <div  class="row flex justify-content-center">
+                <div class="col-md-3 mt-4">
+                    <mat-card id="analog_board" (click)="status(3)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="analog_board" [(ngModel)]="properties[3]" (click)="status(3)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="grill_with_backrest" (click)="status(4)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="grill_with_backrest" [(ngModel)]="properties[4]" (click)="status(4)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="load_grill" (click)="status(5)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="load_grill" [(ngModel)]="properties[5]" (click)="status(5)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <div  class="row flex justify-content-center">
+                <div class="col-md-3 mt-4">
+                    <mat-card id="italian_exhaust" (click)="status(6)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="italian_exhaust" [(ngModel)]="properties[6]" (click)="status(6)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="dual_shotgun_exhaust" (click)="status(7)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="dual_shotgun_exhaust" [(ngModel)]="properties[7]" (click)="status(7)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="low_center_of_gravity_exhaust" (click)="status(8)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="low_center_of_gravity_exhaust" [(ngModel)]="properties[8]" (click)="status(8)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <div  class="row flex justify-content-center">
+                <div class="col-md-3 mt-4">
+                    <mat-card id="brake_type" (click)="status(9)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="brake_type" [(ngModel)]="properties[9]" (click)="status(9)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="trunk" (click)="status(10)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="trunk" [(ngModel)]="properties[10]" (click)="status(10)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="type_of_rims" (click)="status(11)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="type_of_rims" [(ngModel)]="properties[11]" (click)="status(11)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <div  class="row flex justify-content-center">
+                <div class="col-md-3 mt-4">
+                    <mat-card id="headlight_type" (click)="status(12)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="headlight_type" [(ngModel)]="properties[12]" (click)="status(12)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="tires" (click)="status(13)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="tires" [(ngModel)]="properties[13]" (click)="status(13)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <mat-card id="inverted_front_suspension" (click)="status(14)">
+                        <mat-card-content>
+                            <mat-checkbox color="primary" name="inverted_front_suspension" [(ngModel)]="properties[14]" (click)="status(14)">Gasolina</mat-checkbox>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div align="end">
+        <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
+            <mat-icon>navigate_before</mat-icon>
+        </button>
+        <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
+            <mat-icon>navigate_next</mat-icon>
+        </button>
+    </div>
+</form>

@@ -4,7 +4,7 @@
 
 
 <mat-stepper [linear]="isLinear" #stepper >
-  <mat-step [stepControl]="firstFormGroup" label="¿Cuál es tu presupuesto?">
+  <mat-step [stepControl]="firstFormGroup" label="Presupuesto">
     <ng-template matStepperIcon="motorcycle">
       <mat-icon>motorcycle</mat-icon>
     </ng-template>
@@ -12,17 +12,17 @@
     <app-form01></app-form01>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Selecciona tu tipo de Motocicleta">
+  <mat-step [stepControl]="secondFormGroup" label="Tipo de Motocicleta">
 
     <app-form02></app-form02>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+  <mat-step [stepControl]="secondFormGroup" label="Tipo de Combustible">
 
     <app-form03></app-form03>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+  <mat-step [stepControl]="secondFormGroup" label="Equipamiento Adicional">
 
     <app-form04></app-form04>
   </mat-step>

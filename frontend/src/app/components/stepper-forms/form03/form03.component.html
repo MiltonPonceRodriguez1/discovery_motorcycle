@@ -1,1 +1,63 @@
-<p>form03 works!</p>
+<div class="text-center mt-1">
+    <h1>¿Qué tipo de combustible le gustaría?</h1>
+</div>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="text-center">
+        <h2>Elige tantos como quieras</h2>
+    </div>
+
+
+    <div class="mb-3">
+        <div class="container">
+
+            <div  class="row flex justify-content-center mt-3">
+                <mat-card id="petrol" (click)="status('petrol')">
+                    <mat-card-content>
+                        <mat-checkbox color="primary" name="petrol" [(ngModel)]="petrol" (click)="status('petrol')">Gasolina</mat-checkbox>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="row flex justify-content-center mt-3">
+                <mat-card id="diesel" (click)="status('diesel')">
+                    <mat-card-content>
+                        <mat-checkbox color="primary" name="diesel" [(ngModel)]="diesel" (click)="status('diesel')">Diesel</mat-checkbox>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="row flex justify-content-center mt-3">
+                <mat-card id="electric" (click)="status('electric')">
+                    <mat-card-content>
+                        <mat-checkbox color="primary" name="electric" [(ngModel)]="electric" (click)="status('electric')">Eléctrico</mat-checkbox>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="row flex justify-content-center mt-3">
+                <mat-card id="hybrid" (click)="status('hybrid')">
+                    <mat-card-content>
+                        <mat-checkbox color="primary" name="hybrid" [(ngModel)]="hybrid" (click)="status('hybrid')">Híbrido</mat-checkbox>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+
+        <!--<ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput name="name" placeholder="Last name, First name" [(ngModel)]="nombre" required >
+        </mat-form-field>-->
+
+    <div align="end">
+        <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
+            <mat-icon>navigate_before</mat-icon>
+        </button>
+        <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
+            <mat-icon>navigate_next</mat-icon>
+        </button>
+    </div>
+</form>
