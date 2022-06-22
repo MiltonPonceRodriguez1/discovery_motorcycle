@@ -12,6 +12,7 @@ declare var $:any;
 export class Form04Component implements OnInit, DoCheck {
   public properties: boolean[];
   public properties_name: string[];
+  public properties_name_span: string[];
 
   constructor() {
     this.properties = Array();
@@ -25,15 +26,40 @@ export class Form04Component implements OnInit, DoCheck {
       'italian_exhaust',
       'dual_shotgun_exhaust',
       'low_center_of_gravity_exhaust',
-      'brake_type',
+      'brake_disc',
+      'brake_drum',
       'trunk',
-      'type_of_rims',
-      'headlight_type',
-      'tires',
+      'aluminum_rims',
+      'retro_rims',
+      'full_headlight_led',
+      'halogen_headlight',
+      'led_fog_lights',
+      'off_road_tires',
       'inverted_front_suspension',
-      'monoshock_suspension',
-      'XD',
-      'Elrokysmicks'
+      'monoshock_suspension'
+    );
+
+    this.properties_name_span = Array(
+      'Alarma Antirrobo',
+      'Puerto USB',
+      'Tablero Digital',
+      'Tablero Analógico',
+      'Parrilla Con Respaldo',
+      'Parrilla de Carga',
+      'Escape Italiano',
+      'Escape Doble Tipo Shotgun',
+      'Escape de Bajo Centro de Gravedad',
+      'Freno de Disco',
+      'Freno de Tambor',
+      'Cajuela',
+      'Rines de Aluminio',
+      'Rines Retro',
+      'Faro Full LED',
+      'Faro de Halógeno',
+      'Faros de Niebla LED',
+      'Llantas Off Road',
+      'Suspensión Delantera Invertida',
+      'Suspensión Monoshock'
     );
 
     this.properties_name.forEach(element =>
@@ -43,7 +69,8 @@ export class Form04Component implements OnInit, DoCheck {
   }
 
   ngOnInit(): void {
-    //console.log(this.properties);
+    console.log(this.properties_name.length);
+    console.log(this.properties_name_span.length);
   }
 
   onSubmit(form: any) {

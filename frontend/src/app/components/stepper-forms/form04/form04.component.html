@@ -14,7 +14,7 @@
                 <div *ngFor="let elem of properties_name; index as i;" class="col-md-6 col-lg-4 mt-4">
                     <mat-card id="{{properties_name[i]}}" (click)="status(i)">
                         <mat-card-content>
-                            <mat-checkbox color="primary" name="{{properties_name[i]}}" [(ngModel)]="properties[i]" (click)="status(i)">{{properties_name[i]}}</mat-checkbox>
+                            <mat-checkbox color="primary" name="{{properties_name[i]}}" [(ngModel)]="properties[i]" (click)="status(i)">{{properties_name_span[i]}}</mat-checkbox>
                         </mat-card-content>
                     </mat-card>
                 </div>
@@ -31,3 +31,5 @@
         </button>
     </div>
 </form>
+
+<div style="height: 50px;"></div>
