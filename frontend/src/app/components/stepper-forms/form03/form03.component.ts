@@ -49,11 +49,11 @@ export class Form03Component implements OnInit, DoCheck {
   update_style (type: any, type_str: string) {
     if (type) {
 
-      $(type_str).removeClass('test');
-      $(type_str).addClass('test-ts');
+      $(type_str).removeClass('check-false');
+      $(type_str).addClass('check-true');
     } else {
-      $(type_str).removeClass('test-ts');
-      $(type_str).addClass('test');
+      $(type_str).removeClass('check-true');
+      $(type_str).addClass('check-false');
     }
   }
 

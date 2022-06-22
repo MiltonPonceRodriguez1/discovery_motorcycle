@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TooltipPosition} from '@angular/material/tooltip';
 
+declare var jQuery:any;
+declare var $:any;
+
 @Component({
   selector: 'app-stepper',
   templateUrl: './stepper.component.html',
@@ -63,7 +66,7 @@ export class StepperComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    !this.isLinear ? 'Enable linear mode' : 'Disable linear mode'
+    !this.isLinear ? 'Enable linear mode' : 'Disable linear mode';
   }
 
 }

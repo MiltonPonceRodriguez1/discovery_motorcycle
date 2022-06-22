@@ -113,6 +113,18 @@ body {
   color: #fafafa;
 }
 
+/*@media only screen and (max-width: 600px) {
+  .mat-step-text-label {
+    visibility: hidden;
+  }
+}*/
+
+@media (max-width: 641px)  {
+  .mat-step-text-label {
+    visibility: hidden;
+  }
+}
+
 .mat-step-header .mat-step-icon {
   background-color: #343a40;
 }

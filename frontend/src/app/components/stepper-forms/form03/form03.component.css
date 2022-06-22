@@ -2,24 +2,25 @@
     width: 250px;
 }
 
-.test {
+.check-false {
+    border: 3px solid #fafafa;
     background-color: #fafafa;
     border-radius: 5px;
   }
 
-.test:hover {
-    border: 2px solid #6c757d;
+.check-false:hover {
+    border: 3px solid #6c757d;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.test-ts {
-    border: 2.3px solid #00a4ff;
+.check-true {
+    border: 3px solid #00a4ff;
     background-color: #e6f6ff;
 }
 
-.test-ts:hover {
-    border: 3px solid #00a4ff;
+.check-true:hover {
+    border: 3px solid #027aba;
     background-color: #e6f6ff;
     cursor: pointer;
 }

@@ -69,8 +69,6 @@ export class Form04Component implements OnInit, DoCheck {
   }
 
   ngOnInit(): void {
-    console.log(this.properties_name.length);
-    console.log(this.properties_name_span.length);
   }
 
   onSubmit(form: any) {
