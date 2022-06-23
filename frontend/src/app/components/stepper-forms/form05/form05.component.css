@@ -1,0 +1,9 @@
+.mat-slider {
+    width: 275px;
+}
+
+@media (max-width: 641px)  {
+    .mat-slider {
+        width: 380px;
+    }
+  }
