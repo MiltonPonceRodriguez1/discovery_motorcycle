@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Form06Component implements OnInit {
 
+  test: string[] = Array('1', '2', '3', '4', '5', '6', '7');
+
   constructor() { }
 
   ngOnInit(): void {
