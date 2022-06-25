@@ -1,192 +1,192 @@
-<div class="text-center mt-1">
-    <h1>Selecciona las Especificaciones de Rendimiento para tu Motocicleta.</h1>
-</div>
+<div class="mt-4">
+    <div class="text-center mt-1">
+        <h1>Selecciona las Especificaciones de Rendimiento para tu Motocicleta.</h1>
+    </div>
 
-<form #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <div class="mb-3">
-        <div class="container">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="mb-3">
+            <div class="container">
 
-            <div class="row">
-                <div class="text-center mt-3">
-                    <h2>Capacidad del Tanque de Combustible</h2>
+                <div class="row">
+                    <div class="text-center mt-3">
+                        <h2>Capacidad del Tanque de Combustible</h2>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="text-center">
+                            <mat-card-content>
+                                    <mat-form-field class="example-margin example-width" appearance="fill">
+                                        <mat-label>Litros Mínimos:</mat-label>
+                                        <input matInput type="number" name="fuel_tank_min" [(ngModel)]="fuel_tank_min" min="4" max="{{fuel_tank_max - 1}}">
+                                    </mat-form-field>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="example-result-card">
+                            <mat-card-content>
+                                <div class="text-center">
+                                    <label id="example-name-label" class="example-name-label">Litros Mínimos: {{fuel_tank_min}}</label>
+                                </div>
+                                <mat-slider class="example-margin" name="fuel_tank_min" [disabled]="disabled" [invert]="invert" [max]="fuel_tank_threshold_min" [min]="min_slider_fuel_tank" [step]="step"
+                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                [(ngModel)]="fuel_tank_min" [vertical]="vertical" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="text-center">
+                            <mat-card-content>
+                                    <mat-form-field class="example-margin example-width" appearance="fill">
+                                        <mat-label>Litros Máximos:</mat-label>
+                                        <input matInput type="number" name="fuel_tank_max" [(ngModel)]="fuel_tank_max" min="{{fuel_tank_min + 1}}" max="25">
+                                    </mat-form-field>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="example-result-card">
+                            <mat-card-content>
+                                <div class="text-center">
+                                    <label id="example-name-label" class="example-name-label">Litros Máximos: {{fuel_tank_max}}</label>
+                                </div>
+                                <mat-slider class="example-margin" name="fuel_tank_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_fuel_tank" [min]="fuel_tank_threshold_max" [step]="step"
+                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                [(ngModel)]="fuel_tank_max" [vertical]="vertical" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
                 </div>
 
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="text-center">
-                        <mat-card-content>
-                                <mat-form-field class="example-margin example-width" appearance="fill">
-                                    <mat-label>Litros Mínimos:</mat-label>
-                                    <input matInput type="number" name="fuel_tank_min" [(ngModel)]="fuel_tank_min" min="4" max="{{fuel_tank_max - 1}}">
-                                </mat-form-field>
-                        </mat-card-content>
-                    </mat-card>
+
+
+                <div class="row">
+                    <div class="text-center mt-3">
+                        <h2>Velocidad Máxima</h2>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="text-center">
+                            <mat-card-content>
+                                    <mat-form-field class="example-margin example-width" appearance="fill">
+                                        <mat-label>Velocidad Mínima:</mat-label>
+                                        <input matInput type="number" name="speed_min" [(ngModel)]="speed_min" min="60" max="{{speed_max - 1}}">
+                                    </mat-form-field>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="example-result-card">
+                            <mat-card-content>
+                                <div class="text-center">
+                                    <label id="example-name-label" class="example-name-label">Velocidad Mínima: {{speed_min}}</label>
+                                </div>
+                                <mat-slider class="example-margin" name="speed_min" [disabled]="disabled" [invert]="invert" [max]="speed_threshold_min" [min]="min_slider_speed" [step]="step"
+                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                [(ngModel)]="speed_min" [vertical]="vertical" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="text-center">
+                            <mat-card-content>
+                                    <mat-form-field class="example-margin example-width" appearance="fill">
+                                        <mat-label>Velocidad Máxima:</mat-label>
+                                        <input matInput type="number" name="speed_max" [(ngModel)]="speed_max" min="{{speed_min + 1}}" max="140">
+                                    </mat-form-field>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="example-result-card">
+                            <mat-card-content>
+                                <div class="text-center">
+                                    <label id="example-name-label" class="example-name-label">Litros Máximos: {{speed_max}}</label>
+                                </div>
+                                <mat-slider class="example-margin" name="speed_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_speed" [min]="speed_threshold_max" [step]="step"
+                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                [(ngModel)]="speed_max" [vertical]="vertical" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
                 </div>
 
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="example-result-card">
-                        <mat-card-content>
-                            <div class="text-center">
-                                <label id="example-name-label" class="example-name-label">Litros Mínimos: {{fuel_tank_min}}</label>
-                            </div>
-                            <mat-slider class="example-margin" name="fuel_tank_min" [disabled]="disabled" [invert]="invert" [max]="fuel_tank_threshold_min" [min]="min_slider_fuel_tank" [step]="step"
-                            [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="fuel_tank_min" [vertical]="vertical" aria-labelledby="example-name-label">
-                            </mat-slider>
-                        </mat-card-content>
-                    </mat-card>
+                <div class="row">
+                    <div class="text-center mt-3">
+                        <h2>Rendimiento por KM/L</h2>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="text-center">
+                            <mat-card-content>
+                                    <mat-form-field class="example-margin example-width" appearance="fill">
+                                        <mat-label>KM/L Mínimos:</mat-label>
+                                        <input matInput type="number" name="performance_min" [(ngModel)]="performance_min" min="25" max="{{performance_max - 1}}">
+                                    </mat-form-field>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="example-result-card">
+                            <mat-card-content>
+                                <div class="text-center">
+                                    <label id="example-name-label" class="example-name-label">KM/L Mínimos: {{performance_min}}</label>
+                                </div>
+                                <mat-slider class="example-margin" name="performance_min" [disabled]="disabled" [invert]="invert" [max]="performance_threshold_min" [min]="min_slider_performance" [step]="step"
+                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                [(ngModel)]="performance_min" [vertical]="vertical" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="text-center">
+                            <mat-card-content>
+                                    <mat-form-field class="example-margin example-width" appearance="fill">
+                                        <mat-label>KM/L Máximos:</mat-label>
+                                        <input matInput type="number" name="performance_max" [(ngModel)]="performance_max" min="{{performance_min + 1}}" max="35">
+                                    </mat-form-field>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <div class="col-md-3 col-lg-3 mt-3">
+                        <mat-card class="example-result-card">
+                            <mat-card-content>
+                                <div class="text-center">
+                                    <label id="example-name-label" class="example-name-label">KM/L Máximos: {{performance_max}}</label>
+                                </div>
+                                <mat-slider class="example-margin" name="performance_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_performance" [min]="performance_threshold_max" [step]="step"
+                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                [(ngModel)]="performance_max" [vertical]="vertical" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
                 </div>
 
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="text-center">
-                        <mat-card-content>
-                                <mat-form-field class="example-margin example-width" appearance="fill">
-                                    <mat-label>Litros Máximos:</mat-label>
-                                    <input matInput type="number" name="fuel_tank_max" [(ngModel)]="fuel_tank_max" min="{{fuel_tank_min + 1}}" max="25">
-                                </mat-form-field>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="example-result-card">
-                        <mat-card-content>
-                            <div class="text-center">
-                                <label id="example-name-label" class="example-name-label">Litros Máximos: {{fuel_tank_max}}</label>
-                            </div>
-                            <mat-slider class="example-margin" name="fuel_tank_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_fuel_tank" [min]="fuel_tank_threshold_max" [step]="step"
-                            [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="fuel_tank_max" [vertical]="vertical" aria-labelledby="example-name-label">
-                            </mat-slider>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
             </div>
-
-
-
-            <div class="row">
-                <div class="text-center mt-3">
-                    <h2>Velocidad Máxima</h2>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="text-center">
-                        <mat-card-content>
-                                <mat-form-field class="example-margin example-width" appearance="fill">
-                                    <mat-label>Velocidad Mínima:</mat-label>
-                                    <input matInput type="number" name="speed_min" [(ngModel)]="speed_min" min="60" max="{{speed_max - 1}}">
-                                </mat-form-field>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="example-result-card">
-                        <mat-card-content>
-                            <div class="text-center">
-                                <label id="example-name-label" class="example-name-label">Velocidad Mínima: {{speed_min}}</label>
-                            </div>
-                            <mat-slider class="example-margin" name="speed_min" [disabled]="disabled" [invert]="invert" [max]="speed_threshold_min" [min]="min_slider_speed" [step]="step"
-                            [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="speed_min" [vertical]="vertical" aria-labelledby="example-name-label">
-                            </mat-slider>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="text-center">
-                        <mat-card-content>
-                                <mat-form-field class="example-margin example-width" appearance="fill">
-                                    <mat-label>Velocidad Máxima:</mat-label>
-                                    <input matInput type="number" name="speed_max" [(ngModel)]="speed_max" min="{{speed_min + 1}}" max="140">
-                                </mat-form-field>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="example-result-card">
-                        <mat-card-content>
-                            <div class="text-center">
-                                <label id="example-name-label" class="example-name-label">Litros Máximos: {{speed_max}}</label>
-                            </div>
-                            <mat-slider class="example-margin" name="speed_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_speed" [min]="speed_threshold_max" [step]="step"
-                            [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="speed_max" [vertical]="vertical" aria-labelledby="example-name-label">
-                            </mat-slider>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="text-center mt-3">
-                    <h2>Rendimiento por KM/L</h2>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="text-center">
-                        <mat-card-content>
-                                <mat-form-field class="example-margin example-width" appearance="fill">
-                                    <mat-label>KM/L Mínimos:</mat-label>
-                                    <input matInput type="number" name="performance_min" [(ngModel)]="performance_min" min="25" max="{{performance_max - 1}}">
-                                </mat-form-field>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="example-result-card">
-                        <mat-card-content>
-                            <div class="text-center">
-                                <label id="example-name-label" class="example-name-label">KM/L Mínimos: {{performance_min}}</label>
-                            </div>
-                            <mat-slider class="example-margin" name="performance_min" [disabled]="disabled" [invert]="invert" [max]="performance_threshold_min" [min]="min_slider_performance" [step]="step"
-                            [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="performance_min" [vertical]="vertical" aria-labelledby="example-name-label">
-                            </mat-slider>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="text-center">
-                        <mat-card-content>
-                                <mat-form-field class="example-margin example-width" appearance="fill">
-                                    <mat-label>KM/L Máximos:</mat-label>
-                                    <input matInput type="number" name="performance_max" [(ngModel)]="performance_max" min="{{performance_min + 1}}" max="35">
-                                </mat-form-field>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-3 col-lg-3 mt-3">
-                    <mat-card class="example-result-card">
-                        <mat-card-content>
-                            <div class="text-center">
-                                <label id="example-name-label" class="example-name-label">KM/L Máximos: {{performance_max}}</label>
-                            </div>
-                            <mat-slider class="example-margin" name="performance_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_performance" [min]="performance_threshold_max" [step]="step"
-                            [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="performance_max" [vertical]="vertical" aria-labelledby="example-name-label">
-                            </mat-slider>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-            </div>
-
         </div>
-    </div>
 
-    <div align="end">
-        <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
-            <mat-icon>navigate_before</mat-icon>
-        </button>
-        <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
-            <mat-icon>navigate_next</mat-icon>
-        </button>
-    </div>
-</form>
-
-<div style="height: 50px;"></div>
+        <div align="end">
+            <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
+                <mat-icon>navigate_before</mat-icon>
+            </button>
+            <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
+                <mat-icon>navigate_next</mat-icon>
+            </button>
+        </div>
+    </form>
+</div>

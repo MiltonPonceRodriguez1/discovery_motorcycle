@@ -1,8 +1,5 @@
-<div class="text-center">
-  <h1>Vento's Discovery</h1>
-</div>
-
 <mat-stepper [linear]="isLinear" #stepper >
+
 
   <mat-step id="step-test" [stepControl]="firstFormGroup" label="Presupuesto">
     <ng-template matStepperIcon="motorcycle">
@@ -16,19 +13,19 @@
     <app-form02></app-form02>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Tipo de Combustible">
+  <mat-step [stepControl]="thirdFormGroup" label="Tipo de Combustible">
     <app-form03></app-form03>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Equipamiento Adicional">
+  <mat-step [stepControl]="fourthdFormGroup" label="Equipamiento Adicional">
     <app-form04></app-form04>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Especificaciones de Rendimiento">
+  <mat-step [stepControl]="fiveFormGroup" label="Especificaciones de Rendimiento">
     <app-form05></app-form05>
   </mat-step>
 
-  <mat-step [stepControl]="secondFormGroup" label="Tu Moto Ideal">
+  <mat-step [stepControl]="sixFormGroup" label="Tu Moto Ideal">
     <app-form06></app-form06>
   </mat-step>
 
@@ -43,119 +40,3 @@
     </div>
   </mat-step>
 </mat-stepper>
-
-
-
-<!--<div class="container text-center">
-  <app-test></app-test>
-</div>-->
-
-
-<!--
-
-
-<h2>PRICES xD</h2>
-
-<mat-card>
-  <mat-card-content>
-    <section class="example-section">
-      <mat-form-field class="example-margin example-width" appearance="fill">
-        <mat-label>Value</mat-label>
-        <input matInput type="number" [(ngModel)]="value">
-      </mat-form-field>
-    </section>
-  </mat-card-content>
-</mat-card>
-
-<mat-card class="example-result-card">
-  <mat-card-content>
-
-    <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-      <label id="example-name-label" class="example-name-label">Max Value</label>
-      <label class="example-value-label">{{value}}</label>
-    </div>
-    <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
-      [thumbLabel]="thumbLabel" [displayWith]="formatLabel" [tickInterval]="getSliderTickInterval()" [(ngModel)]="value"
-      [vertical]="vertical" aria-labelledby="example-name-label">
-    </mat-slider>
-  </mat-card-content>
-</mat-card>
-
-
-<hr>
-<mat-grid-list cols="2" rowHeight="1:1">
-  <mat-grid-tile>
-    <mat-card>
-      <mat-card-content>
-        <section class="example-section">
-          <mat-form-field class="example-margin example-width" appearance="fill">
-            <mat-label>Value</mat-label>
-            <input matInput type="number" [(ngModel)]="value">
-          </mat-form-field>
-        </section>
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card class="example-result-card">
-      <mat-card-content>
-
-        <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-          <label id="example-name-label" class="example-name-label">Max Value</label>
-          <label class="example-value-label">{{value}}</label>
-        </div>
-        <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
-          [thumbLabel]="thumbLabel" [displayWith]="formatLabel" [tickInterval]="getSliderTickInterval()"
-          [(ngModel)]="value" [vertical]="vertical" aria-labelledby="example-name-label">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-
-  </mat-grid-tile>
-</mat-grid-list>
-
-
-<hr>
-<h1 class="text-center">BOOSTRAP</h1>
-
-
-
-<h1 class="text-center">XD</h1>
-
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-md-2  d-flex justify-content-center">
-
-      <mat-card>
-        <mat-card-content>
-          <section class="example-section">
-            <mat-form-field class="example-margin example-width" appearance="fill">
-              <mat-label>Value</mat-label>
-              <input matInput type="number" [(ngModel)]="value">
-            </mat-form-field>
-          </section>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-
-    <div class="col-md-4 d-flex justify-content-center">
-      <mat-card class="example-result-card">
-        <mat-card-content>
-
-          <div class="example-label-container" [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'">
-            <label id="example-name-label" class="example-name-label">Max Value</label>
-            <label class="example-value-label">{{value}}</label>
-          </div>
-          <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
-            [thumbLabel]="thumbLabel" [displayWith]="formatLabel" [tickInterval]="getSliderTickInterval()"
-            [(ngModel)]="value" [vertical]="vertical" aria-labelledby="example-name-label">
-          </mat-slider>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-</div>
-
--->

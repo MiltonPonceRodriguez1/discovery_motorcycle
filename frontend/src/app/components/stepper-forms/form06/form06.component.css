@@ -4,3 +4,45 @@
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
+
+.mat-card-actions:not(.mat-card-actions-align-end) .mat-raised-button:first-child {
+  width: 100%;
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 4px solid #03a561;
+  letter-spacing: 1px;
+}
+
+.mat-card-actions:not(.mat-card-actions-align-end) .mat-raised-button:hover {
+  background-color: #02844e;
+  color: #fafafa;
+
+}
+
+.mat-card-actions:not(.mat-card-actions-align-end) .mat-raised-button {
+  transition-property: all;
+  transition-duration: 30ms;
+}
+
+.mat-card-actions:not(.mat-card-actions-align-end) .mat-raised-button:focus {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+
+  border: 4px solid #fed500;
+}
+
+.brand {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.brand-motorcycle {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

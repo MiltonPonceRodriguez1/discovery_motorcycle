@@ -49,7 +49,10 @@ export class StepperComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  ThirdFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
+  fourthdFormGroup: FormGroup;
+  fiveFormGroup: FormGroup;
+  sixFormGroup: FormGroup;
 
   constructor(
     private _formBuilder: FormBuilder
@@ -60,7 +63,16 @@ export class StepperComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
-    this.ThirdFormGroup = this._formBuilder.group({
+    this.thirdFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    });
+    this.fourthdFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    });
+    this.fiveFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+    });
+    this.sixFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
     });
   }

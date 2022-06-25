@@ -1,35 +1,36 @@
-<div class="text-center mt-1">
-    <h1>¿Qué Características desearía en su Motocicleta?</h1>
-</div>
-
-<form #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <div class="text-center">
-        <h2>Elige tantas como quieras</h2>
+<div class="mt-4">
+    <div class="text-center mt-1">
+        <h1>¿Qué Características desearía en su Motocicleta?</h1>
     </div>
 
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="text-center">
+            <h2>Elige tantas como quieras</h2>
+        </div>
 
-    <div class="mb-3">
-        <div class="container">
-            <div class="row">
-                <div *ngFor="let elem of properties_name; index as i;" class="col-md-6 col-lg-4 mt-4">
-                    <mat-card id="{{properties_name[i]}}" (click)="status(i)">
-                        <mat-card-content>
-                            <mat-checkbox color="primary" name="{{properties_name[i]}}" [(ngModel)]="properties[i]" (click)="status(i)">{{properties_name_span[i]}}</mat-checkbox>
-                        </mat-card-content>
-                    </mat-card>
+
+        <div class="mb-3">
+            <div class="container">
+                <div class="row">
+                    <div *ngFor="let elem of properties_name; index as i;" class="col-md-6 col-lg-4 mt-4">
+                        <mat-card id="{{properties_name[i]}}" (click)="status(i)">
+                            <mat-card-content>
+                                <mat-checkbox color="primary" name="{{properties_name[i]}}" [(ngModel)]="properties[i]" (click)="status(i)">{{properties_name_span[i]}}</mat-checkbox>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div align="end">
-        <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
-            <mat-icon>navigate_before</mat-icon>
-        </button>
-        <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
-            <mat-icon>navigate_next</mat-icon>
-        </button>
-    </div>
-</form>
+        <div align="end">
+            <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
+                <mat-icon>navigate_before</mat-icon>
+            </button>
+            <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
+                <mat-icon>navigate_next</mat-icon>
+            </button>
+        </div>
+    </form>
+</div>
 
-<div style="height: 50px;"></div>

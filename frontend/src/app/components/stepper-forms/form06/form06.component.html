@@ -1,29 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div *ngFor="let elem of test; index as i;" class="col-md-auto col-lg-4 mt-4">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-subtitle>Coincidencia Cercana</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.vento.com/img/hyper280/2022/hyper280-16.jpg" alt="Motito">
-        <mat-card-content>
-          <div>Vento</div>
-
-          <p><strong>Hyper 280</strong></p>
-
-          <p>Power Ranger, Pero acelera Macizo!!</p>
-
-          <hr/>
-          Nueva desde $914 MXN / Semanales
-        </mat-card-content>
-
-        <mat-card-actions>
-          <div class="text-center">
-            <a mat-raised-button class="mat-success" href="https://www.vento.com/planes-hyper-280/" target="_blank">Consultar Planes</a>
-          </div>
-
-        </mat-card-actions>
-      </mat-card>
+<div class="mt-4">
+  <div class="text-center mt-1">
+    <h1>Te Recomendamos las Siguientes Motocicletas.</h1>
   </div>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let elem of test; index as i;" class="col-md-auto col-lg-4 mt-4">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-subtitle>
+              <div class="d-flex justify-content-center">{{type_of_recommendation[i % 2]}}</div>
+              </mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://www.vento.com/img/hyper280/2022/hyper280-16.jpg" alt="Motito">
+          <mat-card-content>
+
+            <p class="text-center">
+              <span class="brand">Vento Motorcycle:</span><span class="brand-motorcycle"> Hyper 280</span>
+            </p>
+
+            <p></p>
+
+            <p>Poseedora de uno de los desempeños más sobresalientes de la marca y del mercado!</p>
+
+            <p>Nueva desde $914 MXN / Semanales</p>
+
+          </mat-card-content>
+
+          <mat-card-actions>
+            <div class="text-center mb-2">
+              <a mat-raised-button class="mat-success" href="https://www.vento.com/planes-hyper-280/" target="_blank">Consultar Planes</a>
+            </div>
+
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>
