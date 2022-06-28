@@ -117,6 +117,22 @@ body {
   background-color: #000000;
 }
 
+
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header:hover {
+  background-color: rgba(233, 221, 221, 0.137);
+}
+
+@media (max-width: 641px)  {
+  .mat-horizontal-stepper-header-container {
+    height: 80px;
+  }
+
+  .mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+    height: 80px !important;
+  }
+}
+
 .mat-step-text-label {
   color: #fafafa;
   font-family: SAIRA;
@@ -162,4 +178,21 @@ body {
 .mat-success {
   background-color: #03a561;
   color: #fff;
+}
+
+.mat-step-header .mat-step-icon {
+  border: 2px solid #fafafa;
+}
+
+/*.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #3f51b5;
+  border: 2px solid #0055ff;
+  color: #fff;
+}*/
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #fafafa;
+  border: 2px solid #fafafa;
+  color: #000000;
+  font-weight: bold;
 }

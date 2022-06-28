@@ -2,3 +2,13 @@
 .mat-slider {
     width: 400px;
 }
+
+@media (max-width: 641px)  {
+    .mat-slider {
+        width: 200px;
+    }
+
+    .type-of-pay {
+        margin-bottom: 10px;
+    }
+}

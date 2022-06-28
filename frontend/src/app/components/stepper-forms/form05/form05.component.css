@@ -4,6 +4,6 @@
 
 @media (max-width: 641px)  {
     .mat-slider {
-        width: 380px;
+        width: 200px;
     }
-  }
+}

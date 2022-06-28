@@ -28,11 +28,12 @@
                             <mat-card-content>
                                 <div class="text-center">
                                     <label id="example-name-label" class="example-name-label">Litros Mínimos: {{fuel_tank_min}}</label>
+
+                                    <mat-slider class="example-margin" name="fuel_tank_min" [disabled]="disabled" [invert]="invert" [max]="fuel_tank_threshold_min" [min]="min_slider_fuel_tank" [step]="step"
+                                    [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                    [(ngModel)]="fuel_tank_min" [vertical]="vertical" aria-labelledby="example-name-label">
+                                    </mat-slider>
                                 </div>
-                                <mat-slider class="example-margin" name="fuel_tank_min" [disabled]="disabled" [invert]="invert" [max]="fuel_tank_threshold_min" [min]="min_slider_fuel_tank" [step]="step"
-                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                                [(ngModel)]="fuel_tank_min" [vertical]="vertical" aria-labelledby="example-name-label">
-                                </mat-slider>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -53,11 +54,12 @@
                             <mat-card-content>
                                 <div class="text-center">
                                     <label id="example-name-label" class="example-name-label">Litros Máximos: {{fuel_tank_max}}</label>
+
+                                    <mat-slider class="example-margin" name="fuel_tank_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_fuel_tank" [min]="fuel_tank_threshold_max" [step]="step"
+                                    [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                    [(ngModel)]="fuel_tank_max" [vertical]="vertical" aria-labelledby="example-name-label">
+                                    </mat-slider>
                                 </div>
-                                <mat-slider class="example-margin" name="fuel_tank_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_fuel_tank" [min]="fuel_tank_threshold_max" [step]="step"
-                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                                [(ngModel)]="fuel_tank_max" [vertical]="vertical" aria-labelledby="example-name-label">
-                                </mat-slider>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -86,11 +88,12 @@
                             <mat-card-content>
                                 <div class="text-center">
                                     <label id="example-name-label" class="example-name-label">Velocidad Mínima: {{speed_min}}</label>
+
+                                    <mat-slider class="example-margin" name="speed_min" [disabled]="disabled" [invert]="invert" [max]="speed_threshold_min" [min]="min_slider_speed" [step]="step"
+                                    [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                    [(ngModel)]="speed_min" [vertical]="vertical" aria-labelledby="example-name-label">
+                                    </mat-slider>
                                 </div>
-                                <mat-slider class="example-margin" name="speed_min" [disabled]="disabled" [invert]="invert" [max]="speed_threshold_min" [min]="min_slider_speed" [step]="step"
-                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                                [(ngModel)]="speed_min" [vertical]="vertical" aria-labelledby="example-name-label">
-                                </mat-slider>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -111,11 +114,12 @@
                             <mat-card-content>
                                 <div class="text-center">
                                     <label id="example-name-label" class="example-name-label">Litros Máximos: {{speed_max}}</label>
+
+                                    <mat-slider class="example-margin" name="speed_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_speed" [min]="speed_threshold_max" [step]="step"
+                                    [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                    [(ngModel)]="speed_max" [vertical]="vertical" aria-labelledby="example-name-label">
+                                    </mat-slider>
                                 </div>
-                                <mat-slider class="example-margin" name="speed_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_speed" [min]="speed_threshold_max" [step]="step"
-                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                                [(ngModel)]="speed_max" [vertical]="vertical" aria-labelledby="example-name-label">
-                                </mat-slider>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -142,11 +146,12 @@
                             <mat-card-content>
                                 <div class="text-center">
                                     <label id="example-name-label" class="example-name-label">KM/L Mínimos: {{performance_min}}</label>
+
+                                    <mat-slider class="example-margin" name="performance_min" [disabled]="disabled" [invert]="invert" [max]="performance_threshold_min" [min]="min_slider_performance" [step]="step"
+                                    [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                    [(ngModel)]="performance_min" [vertical]="vertical" aria-labelledby="example-name-label">
+                                    </mat-slider>
                                 </div>
-                                <mat-slider class="example-margin" name="performance_min" [disabled]="disabled" [invert]="invert" [max]="performance_threshold_min" [min]="min_slider_performance" [step]="step"
-                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                                [(ngModel)]="performance_min" [vertical]="vertical" aria-labelledby="example-name-label">
-                                </mat-slider>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -167,11 +172,12 @@
                             <mat-card-content>
                                 <div class="text-center">
                                     <label id="example-name-label" class="example-name-label">KM/L Máximos: {{performance_max}}</label>
+
+                                    <mat-slider class="example-margin" name="performance_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_performance" [min]="performance_threshold_max" [step]="step"
+                                    [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
+                                    [(ngModel)]="performance_max" [vertical]="vertical" aria-labelledby="example-name-label">
+                                    </mat-slider>
                                 </div>
-                                <mat-slider class="example-margin" name="performance_max" [disabled]="disabled" [invert]="invert" [max]="max_slider_performance" [min]="performance_threshold_max" [step]="step"
-                                [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()"
-                                [(ngModel)]="performance_max" [vertical]="vertical" aria-labelledby="example-name-label">
-                                </mat-slider>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -180,13 +186,15 @@
             </div>
         </div>
 
-        <div align="end">
-            <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
-                <mat-icon>navigate_before</mat-icon>
-            </button>
-            <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
-                <mat-icon>navigate_next</mat-icon>
-            </button>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-end">
+                <button mat-mini-fab  matStepperPrevious color="primary" class="test-color" aria-label="Example icon button with a plus one icon">
+                    <mat-icon>navigate_before</mat-icon>
+                </button>
+                <button mat-mini-fab  matStepperNext color="success" class="test-color" aria-label="Example icon button with a plus one icon">
+                    <mat-icon>navigate_next</mat-icon>
+                </button>
+            </div>
         </div>
     </form>
 </div>
